@@ -5,5 +5,11 @@
 		<class>model.Asignaturaspordocente</class>
 		<class>model.Docente</class>
 		<class>model.Sequence</class>
+		<properties> 
+            <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://127.0.0.1:3306/profesoresymaterias?serverTimezone=Europe/Madrid"/>
+            <property name="javax.persistence.jdbc.user" value="java"/>
+            <property name="javax.persistence.jdbc.password" value="Abcdefgh.1"/>
+        </properties>
 	</persistence-unit>
 </persistence>
