@@ -291,8 +291,14 @@ public class Principal extends JFrame {
 	}
 
 //	private void cargarAsignaturasPorDocente() {
+//		listModelAsignatura2.removeAllElements();
+//		listModelAsignatura.removeAllElements();
+//		listModelAsignatura.addAll(asignaturas);
+//		listModelAsignatura2.addAll(asignaturas);
+//		
 //		List<Asignatura> l = jlistAsignatura.getSelectedValuesList();
 //		Asignatura a = (Asignatura) jcbDocente.getSelectedItem();
+//		
 //		if (a != null) {
 //			for (Asignatura ag : AsignaturaController.findByNombre(jtfFiltrar.getText())) {
 //				jcbDocente.addItem(m);
