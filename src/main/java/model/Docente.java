@@ -4,28 +4,25 @@ import java.io.Serializable;
 import javax.persistence.*;
 import java.util.List;
 
-
 /**
  * The persistent class for the docente database table.
  * 
  */
 @Entity
-@NamedQuery(name="Docente.findAll", query="SELECT d FROM Docente d")
+@NamedQuery(name = "Docente.findAll", query = "SELECT d FROM Docente d")
 public class Docente implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int id;
 
 	private String nombreCompleto;
 
-	//bi-directional many-to-one association to Asignaturaspordocente
-	@OneToMany(mappedBy="docente")
+	// bi-directional many-to-one association to Asignaturaspordocente
+	@OneToMany(mappedBy = "docente")
 	private List<Asignaturaspordocente> asignaturaspordocentes;
 
-	
-	
 	@Override
 	public String toString() {
 		return nombreCompleto;

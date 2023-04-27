@@ -11,13 +11,18 @@ import model.Asignatura;
 
 public class AsignaturaController {
 
-private static EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("ProfesoresymateriasJPA");
-    
-    public static List<Asignatura> findAll(){
-        EntityManager em = entityManagerFactory.createEntityManager();
-        Query q = em.createNativeQuery("select * from asignatura", Asignatura.class);
-        List<Asignatura> lista = (List<Asignatura>)q.getResultList();
-        em.close();
-        return lista;
-    }
+	private static EntityManagerFactory entityManagerFactory = Persistence
+			.createEntityManagerFactory("ProfesoresymateriasJPA");
+
+	/**
+	 * 
+	 * @return
+	 */
+	public static List<Asignatura> findAll() {
+		EntityManager em = entityManagerFactory.createEntityManager();
+		Query q = em.createNativeQuery("select * from asignatura", Asignatura.class);
+		List<Asignatura> lista = (List<Asignatura>) q.getResultList();
+		em.close();
+		return lista;
+	}
 }

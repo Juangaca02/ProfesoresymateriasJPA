@@ -290,6 +290,23 @@ public class Principal extends JFrame {
 
 	}
 
+//	private void cargarAsignaturasPorDocente() {
+//		List<Asignatura> l = jlistAsignatura.getSelectedValuesList();
+//		Asignatura a = (Asignatura) jcbDocente.getSelectedItem();
+//		if (a != null) {
+//			for (Asignatura ag : AsignaturaController.findByNombre(jtfFiltrar.getText())) {
+//				jcbDocente.addItem(m);
+//			}
+//
+////		(Docente) jcbDocente.getSelectedItem());
+//			jlistAsignatura.getSelectedValues();
+//
+//		}
+//	}
+
+	/**
+	 * 
+	 */
 	private void guardar() {
 		asignaturasParaGuardar.removeAll(asignaturasParaGuardar);
 		for (int i = 0; i < listModelAsignatura2.size(); i++) {
@@ -351,7 +368,9 @@ public class Principal extends JFrame {
 
 	/**
 	 * M�todo que construye el modelo de JList, a utilizar para agregar y eliminar
-	 * provincias
+	 * Asignatura
+	 * 
+	 * @return
 	 */
 	private DefaultListModel getDefaultListModel() {
 		this.listModelAsignatura = new DefaultListModel<Asignatura>();
@@ -360,7 +379,9 @@ public class Principal extends JFrame {
 
 	/**
 	 * M�todo que construye el modelo de JList, a utilizar para agregar y eliminar
-	 * provincias
+	 * Asignatura
+	 * 
+	 * @return
 	 */
 	private DefaultListModel getDefaultListModel2() {
 		this.listModelAsignatura2 = new DefaultListModel<Asignatura>();
@@ -379,17 +400,5 @@ public class Principal extends JFrame {
 			jcbDocente.addItem(m);
 		}
 	}
-
-//	private void cargarAsignaturasDocente() {
-//	Asignatura a = (Asignatura) jcbDocente.getSelectedItem();
-//	if (a != null) {
-//		for (Asignatura ag : AsignaturaController.findByNombre(jtfFiltrar.getText())) {
-//			jcbDocente.addItem(m);
-//		}
-//		
-//		jlistAsignatura.getSelectedValues();
-//		
-//	}
-//}
 
 }
